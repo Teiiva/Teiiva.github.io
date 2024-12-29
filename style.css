@@ -12,55 +12,33 @@ body {
 header {
     background: #007BFF;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
-/* Navigation */
-nav ul {
-    background: #333;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    display: block;
-}
-
-nav ul li a:hover {
-    background: #007BFF;
-}
-
-/* Contenu principal */
-main {
+/* Section Vidéo Simulée */
+#video-section {
+    text-align: center;
     padding: 2rem;
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
-/* Vidéo */
 .video-container {
-    text-align: center;
-    margin: 2rem 0;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-video {
-    max-width: 100%;
+.video-container img {
+    width: 100%;
+    max-width: 800px;
     height: auto;
     border: 2px solid #007BFF;
-    border-radius: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-container img:hover {
+    transform: scale(1.05);
 }
 
 /* Pied de page */
@@ -68,8 +46,6 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
 }
