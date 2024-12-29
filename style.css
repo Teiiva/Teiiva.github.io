@@ -1,51 +1,17 @@
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
+/* Supprimer tous les styles par défaut */
+body, html {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    height: 100%;
 }
 
-/* En-tête */
-header {
-    background: #007BFF;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-/* Section Vidéo Simulée */
-#video-section {
-    text-align: center;
-    padding: 2rem;
-}
-
-.video-container {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.video-container img {
+/* Ajouter une image en fond */
+body {
+    background-image: url('JOUER.png'); /* Remplacez 'JOUER.png' par le chemin de votre image */
+    background-size: cover;           /* Ajuste l'image pour couvrir toute la fenêtre */
+    background-repeat: no-repeat;     /* Empêche la répétition de l'image */
+    background-position: center;      /* Centre l'image */
+    height: 100%;
     width: 100%;
-    max-width: 800px;
-    height: auto;
-    border: 2px solid #007BFF;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.video-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Pied de page */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    overflow: hidden;                 /* Empêche les barres de défilement */
 }
