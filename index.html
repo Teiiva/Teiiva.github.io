@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site avec une image en fond uniquement">
-    <title>Image de Fond</title>
+    <meta name="description" content="Site avec une vidéo en fond">
+    <title>Vidéo de Fond</title>
     <style>
         /* Supprimer tous les styles par défaut */
         body, html {
@@ -13,19 +13,33 @@
             height: 100%;
         }
 
-        /* Ajouter une image en fond */
+        /* Ajouter la vidéo en fond */
         body {
-            background-image: url('JOUER.png'); /* Remplacez 'JOUER.png' par le chemin de votre image */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
             height: 100%;
             width: 100%;
             overflow: hidden; /* Empêche les barres de défilement */
+            position: relative;
+        }
+
+        /* Vidéo en fond */
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+            z-index: -1; /* Placer la vidéo derrière le contenu */
         }
     </style>
 </head>
 <body>
+    <!-- Vidéo en fond -->
+    <video autoplay muted loop>
+        <source src="fond.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la vidéo.
+    </video>
+
     <script>
         // Redirection au clic
         document.body.addEventListener('click', () => {
