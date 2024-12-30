@@ -6,9 +6,56 @@
     <meta name="description" content="Site avec une image en fond uniquement">
     <title>Image de Fond</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Supprimer tous les styles par défaut */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Ajouter une image en fond */
+        body {
+            background-image: url('JOUER.png'); /* Remplacez 'JOUER.png' par le chemin de votre image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Empêche les barres de défilement */
+        }
+
+        /* Style du message */
+        #message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            text-align: center;
+            display: none; /* Cacher le message par défaut */
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
-    <div id="message" class="hidden">Vous avez cliqué sur la page !</div>
-    <script src="script.js"></script>
+    <div id="message">Vous avez cliqué sur la page !</div>
+
+    <script>
+        // Récupère le message
+        const messageDiv = document.getElementById('message');
+
+        // Fonction pour afficher le message
+        document.body.addEventListener('click', () => {
+            messageDiv.style.display = 'block'; // Affiche le message
+            setTimeout(() => {
+                messageDiv.style.display = 'none'; // Cache le message après 2 secondes
+            }, 2000); // Durée d'affichage en millisecondes
+        });
+    </script>
 </body>
 </html>
